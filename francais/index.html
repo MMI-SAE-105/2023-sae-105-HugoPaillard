@@ -5,26 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art des rues</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <link rel="icon" src="../public/img/panneau_rue.webp" />
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
+<div class="berthaaccueil">
+
 <body>
     <header>
         <a href="index.html">
-            <img  src="../public/img/panneau_rue.webp" alt="logo">
+            <div class="header__logo"><img class="logo" src="../public/img/panneau_rue.webp" alt="logo"></div>
         </a>
         <div @click="menuIsOpen = ! menuIsOpen">
-            <img  src="../public/img/menu-open.webp" alt="menu">
+            <img class="hamburger" src="../public/img/menu-open.webp" alt="menu">
         </div>
         <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <div class="menu__overlay">
                 <a href="index.html">
-                    <div><h1>Exposition "Art des rues"</h1></div>
+                    <div class="nomMenu"><h1>Exposition "Art des rues"</h1></div>
                 </a>
                 <div @click="menuIsOpen = ! menuIsOpen">
-                    <img  src="../public/img/cross.webp" alt="cross">
+                    <img class="cross" src="../public/img/cross.webp" alt="cross">
                 </div>
             </div>
             <ul class="menu__link">
@@ -36,14 +38,15 @@
         </nav>
     </header>
 
-   <a href="expo.html"><img src="../public/img/panneau_ville.webp"> <div><h3>Exposition de street art du 13 avril au 23 juin 2021</h3></div> </a>
-   <img src="../public/img/poteau.webp">
-   <a href="streetart.html"><img src="../public/img/panneau_direction_bleu.webp"> <div><h2>C'est quoi le street art ?</h2></div> </a>
-   <a href="basquiat.html"><img src="../public/img/panneau_direction_vert.webp"> <div><h2>Jean-michel Basquiat</h2></div> </a>
-   <a href="banksy.html"><img src="../public/img/panneau_direction_blanc.webp"> <div><h2>Banksy</h2></div> </a>
-   <a href="misstic.html"><img src="../public/img/panneau_direction_bleu.webp"> <div><h2>Miss.tic</h2></div> </a>
-   <a href="haring.html"><img src="../public/img/panneau_direction_vert.webp"> <div><h2>Keith Haring</h2></div> </a>
-   <img src="../public/img/poteau.webp">
+
+   <a class="panneauVille" href="expo.html"><img src="../public/img/panneau_ville.webp"> </a>
+   <a href="streetart.html"><img src="../public/img/streetart.webp"> </a>
+   <a href="basquiat.html"><img src="../public/img/basquiat.webp"> </a>
+   <a href="banksy.html"><img src="../public/img/banksy.webp"> </a>
+   <a href="misstic.html"><img src="../public/img/misstic.webp"> </a>
+   <a href="haring.html"><img src="../public/img/haring.webp"> </a>
+
+</div>
 
    <footer>
    <a href="billetterie.html">
