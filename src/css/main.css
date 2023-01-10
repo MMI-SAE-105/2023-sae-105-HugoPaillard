@@ -1,17 +1,35 @@
 .berthaaccueil {
     background-image: url(../../public/img/rue.webp);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: fixed;
     text-align: center;
-    z-index: -2;
 }
 
 .panneauVille {
-    
+    width: auto;
+    height: 3.5em;
+    margin: 0.4em;
 }
 
-.poteau {
-    z-index: -1;
+.phrase{
+    height: 4em;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.reseau{
+    height: 2em;
+    width: auto;
+}
+
+.mmi{
+    height: auto;
+    width: 36.5%;
+    position: center;
 }
 
 
