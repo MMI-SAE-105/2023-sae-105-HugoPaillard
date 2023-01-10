@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art des rues</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="icon" src="../public/img/panneau_rue.webp" />
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img  src="../public/img/panneau_rue.webp" alt="logo">
+        </a>
+        <div @click="menuIsOpen = ! menuIsOpen">
+            <img  src="../public/img/menu-open.webp" alt="menu">
+        </div>
+        <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="menu__overlay">
+                <a href="index.html">
+                    <div><h1>Exposition "Art des rues"</h1></div>
+                </a>
+                <div @click="menuIsOpen = ! menuIsOpen">
+                    <img  src="../public/img/cross.webp" alt="cross">
+                </div>
+            </div>
+            <ul class="menu__link">
+                <li> <a href="basquiat.html"><img src="../public/img/signatureBasquiat.webp"><div><h1>Jean-michel Basquiat</h1></div></a></li>
+                <li> <a href="banksy.html"><div><h1>Banksy</h1></div><img src="../public/img/signatureBanksy.webp"></a>  </li>
+                <li> <a href="misstic.html"><img src="../public/img/signatureMissTic.webp"> <div><h1>Miss.Tic</h1></div></a>  </li>
+                <li> <a href="haring.html"><div><h1>Keith Haring</h1></div><img src="../public/img/signatureHaring.webp"> </a>  </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div><h1>C'est quoi le street art ?</h1></div>
+    <div><h3>L'art urbain ou street art, est un mouvement artistique contemporain. Il regroupe toutes les formes d’art réalisées dans la rue, ou dans des endroits publics, et englobe diverses techniques telles que le graffiti rapide sur mur, la réclame, le pochoir, la mosaïque, le sticker, l'affichage, voire le yarn bombing ou les installations. C'est principalement un art éphémère vu par un large public.</h3></div>
+  
+    <div> Frise chronologique</div>
+    <img src="../public/img/frise.webp" alt="image" />
+
+    <div>
+        <div>Miss.Tic 1956-???</div>
+        <div>Keith Haring 1958-1990</div>
+        <div>Jean-michel Basquiat 1960-1988</div>
+        <div>Bansky Vers 1974</div>
+    </div>
+
+    <footer>
+        <a href="billetterie.html">
+         <div><h2>Billetterie</h2></div>
+        </a>
+        <a href="Contact">
+         <div><h2>Contact</h2></div>
+        </a>
+        <div>
+        <img src="../public/img/instagram.webp" alt="instagram">
+        <img src="../public/img/twitter.webp" alt="twitter">
+        <img src="../public/img/facebook.webp" alt="facebook">
+        <img src="../public/img/gmail.webp" alt="gmail">
+     </div>
+        <img src="../public/img/logoMMiblanc.webp" alt="logo MMi" /></a>
+     </footer>
+     </body>
+     </html> 
