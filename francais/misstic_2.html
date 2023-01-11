@@ -5,33 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art des rues</title>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <link rel="icon" src="../public/img/panneau_rue.webp" />
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
+<div class="">
+
 <body>
     <header>
         <a href="index.html">
-            <img  src="../public/img/panneau_rue.webp" alt="logo">
+            <img class="logo" src="../public/img/panneau_rue.webp" alt="logo">
         </a>
+        <a class="langue" href="ENindex.html">EN</a>
         <div @click="menuIsOpen = ! menuIsOpen">
-            <img  src="../public/img/menu-open.webp" alt="menu">
+            <img class="hamburger" src="../public/img/menu-open.webp" alt="menu">
         </div>
         <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <div class="menu__overlay">
                 <a href="index.html">
-                    <div><h1>Exposition "Art des rues"</h1></div>
+                    <div class="nomMenu"><h1>Exposition "Art des rues"</h1></div>
                 </a>
                 <div @click="menuIsOpen = ! menuIsOpen">
-                    <img  src="../public/img/cross.webp" alt="cross">
+                    <img class="cross" src="../public/img/cross.webp" alt="cross">
                 </div>
             </div>
             <ul class="menu__link">
-                <li> <a href="basquiat.html"><img src="../public/img/signatureBasquiat.webp"><div><h1>Jean-michel Basquiat</h1></div></a></li>
-                <li> <a href="banksy.html"><div><h1>Banksy</h1></div><img src="../public/img/signatureBanksy.webp"></a>  </li>
-                <li> <a href="misstic.html"><img src="../public/img/signatureMissTic.webp"> <div><h1>Miss.Tic</h1></div></a>  </li>
-                <li> <a href="haring.html"><div><h1>Keith Haring</h1></div><img src="../public/img/signatureHaring.webp"> </a>  </li>
+                <li> <div class="signature"><a href="basquiat.html"><img class="signature" src="../public/img/signatureBasquiat.webp"><div><h1>Jean-michel Basquiat</h1></div></a></div></li>
+                <li> <div class="signature"><a href="banksy.html"><div><h1>Banksy</h1></div><img class="signature" src="../public/img/signatureBanksy.webp"></a></div>  </li>
+                <li> <div class="signature"><a href="misstic.html"><img class="signature" src="../public/img/signatureMissTic.webp"> <div><h1>Miss.Tic</h1></div></a></div>  </li>
+                <li> <div class="signature"><a href="haring.html"><div><h1>Keith Haring</h1></div><img class="signature" src="../public/img/signatureHaring.webp"> </a></div>  </li>
             </ul>
         </nav>
     </header>
