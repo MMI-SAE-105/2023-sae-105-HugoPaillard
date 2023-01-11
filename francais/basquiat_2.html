@@ -10,7 +10,6 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
-
 <div class="berthaoeuvre">
 
 <body>
@@ -25,17 +24,18 @@
         <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <div class="menu__overlay">
                 <a href="index.html">
-                    <div class="nomMenu"><h1>Exposition "Art des rues"</h1></div>
+                    <img class="logomenu" src="../public/img/titremenu.webp" alt="logo">
+                </a>
                 </a>
                 <div @click="menuIsOpen = ! menuIsOpen">
                     <img class="cross" src="../public/img/cross.webp" alt="cross">
                 </div>
             </div>
             <ul class="menu__link">
-                <li> <div class="signature"><a href="basquiat.html"><img class="signature" src="../public/img/signatureBasquiat.webp"><div><h1>Jean-michel Basquiat</h1></div></a></div></li>
-                <li> <div class="signature"><a href="banksy.html"><div><h1>Banksy</h1></div><img class="signature" src="../public/img/signatureBanksy.webp"></a></div>  </li>
-                <li> <div class="signature"><a href="misstic.html"><img class="signature" src="../public/img/signatureMissTic.webp"> <div><h1>Miss.Tic</h1></div></a></div>  </li>
-                <li> <div class="signature"><a href="haring.html"><div><h1>Keith Haring</h1></div><img class="signature" src="../public/img/signatureHaring.webp"> </a></div>  </li>
+                <li> <a href="basquiat.html"> <img class="signaturelf" src="../public/img/signatureBasquiat.webp"> </a> <a href="basquiat.html"> <div class="signature">Jean-michel Basquiat</div></a> </li>
+                <li> <a href="banksy.html"> <img class="signaturedr" src="../public/img/signatureBanksy.webp"> </a> <a href="banksy.html"> <div class="signature">Banksy</div></a> </li>
+                <li> <a href="misstic.html"> <img class="signaturelf" src="../public/img/signatureMissTic.webp"> </a> <a href="misstic.html"> <div class="signature">Miss.Tic</div></a> </li>
+                <li> <a href="haring.html"> <img class="signaturedr" src="../public/img/signatureHaring.webp"> </a> <a href="haring.html"> <div class="signature">Keith Haring</div></a> </li>  
             </ul>
         </nav>
     </header>
