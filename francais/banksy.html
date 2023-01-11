@@ -10,7 +10,7 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
-<div class="">
+<div class="berthaartiste">
 
 <body>
     <header>
@@ -39,18 +39,44 @@
         </nav>
     </header>
 
-    <div><h1>Banksy</h1></div>
-    <div class="carousel">
-        <div class="carouselitem"><figure><img src="../public/img/banksy_1.webp" alt="Flower Thrower"><figcaption>"Flower Thrower" 2003</figcaption></figure></div>
-        <div class="carouselitem"><figure><img src="../public/img/banksy_2.webp" alt="Balloon Girl"><figcaption>"Balloon Girl" 2002</figcaption></figure></div>
-        <div class="carouselitem"><figure><img src="../public/img/banksy_3.webp" alt="musique"><figcaption>"Think Tank" 2003</figcaption></figure></div>
-      </div>
-      <div>Banksy est un artiste d'art urbain qui travaille sous pseudonyme. Son véritable nom et son identité exacte sont inconnus et font toujours l'objet de spéculations. Apparemment britannique et actif depuis les années 1990, il utilise la peinture au pochoir pour faire passer ses messages, qui mêlent souvent politique, humour et poésie. </div>
-    <div><a href="basquiat.html">Jean-michel Basquiat</a><a href="misstic.html">Miss.Tic</a> </div>
+    
+    <div class="artiste"><h1>Banksy</h1></div>
+    <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+        <button @click="const p = $refs.parent ; p.scrollLeft -= p.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt</button><button @click="const p = $refs.parent ; p.scrollLeft += p.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">&gt</button>
+        <div class="carrousel_parent-ecrans" x-ref="parent" 
+                @scroll.debounce.250ms.passive="
+        hrefCourant = '#'+
+                          [...$refs.parent.children]
+                           .find(e=>e.getBoundingClientRect().x>=0)
+                           .id
+                                             "
+        >
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="../public/img/banksy_1.webp" alt="image 1">
+                    <figcaption>"Flower Thrower" 2003</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="../public/img/banksy_2.webp" alt="image 2">
+                    <figcaption>"Ballon Girl" 2002</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="../public/img/banksy_3.webp" alt="image 3">
+                    <figcaption>"Think Tank" 2003</figcaption>
+                </figure>
+            </div>
+    </div>
+
+    
+    <div class="fondArtiste"><p class="descriptionArtiste">Banksy est un artiste d'art urbain qui travaille sous pseudonyme. Son véritable nom et son identité exacte sont inconnus et font toujours l'objet de spéculations. Apparemment britannique et actif depuis les années 1990, il utilise la peinture au pochoir pour faire passer ses messages, qui mêlent souvent politique, humour et poésie.</p></div>
+    <div class="suivant"><div class="prec"><a class="txtsuivant" href="basquiat.html">Jean-michel Basquiat</a></div><div class="suiv"><a class="txtsuivant" href="misstic.html">Miss.Tic</a></div> </div>
 
     <footer>
         <div class="phrase"> <a href="billetterie.html"><p class="foot">Billetterie</p></a> <a href="contact.html"><p class="foot">Contact</p></a> </div>
-        </div>
         <div class="phrase">
         <img class="reseau" src="../public/img/instagram.webp" alt="instagram">
         <img class="reseau" src="../public/img/twitter.webp" alt="twitter">

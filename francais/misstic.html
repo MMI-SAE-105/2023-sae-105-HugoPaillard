@@ -1,64 +1,89 @@
-<!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art des rues</title>
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="icon" src="../public/img/panneau_rue.webp" />
-    <script defer src="https://unpkg.com/alpinejs"></script>
-</head>
+    <!DOCTYPE html>
+    <html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Art des rues</title>
+        <link rel="stylesheet" href="../src/css/style.css">
+        <link rel="icon" src="../public/img/panneau_rue.webp" />
+        <script defer src="https://unpkg.com/alpinejs"></script>
+    </head>
 
-<div class="">
+    <div class="berthaartiste">
 
-<body>
-    <header>
-        <a href="index.html">
-            <img class="logo" src="../public/img/panneau_rue.webp" alt="logo">
-        </a>
-        <a class="langue" href="ENindex.html">EN</a>
-        <div @click="menuIsOpen = ! menuIsOpen">
-            <img class="hamburger" src="../public/img/menu-open.webp" alt="menu">
-        </div>
-        <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-            <div class="menu__overlay">
-                <a href="index.html">
-                    <div class="nomMenu"><h1>Exposition "Art des rues"</h1></div>
-                </a>
-                <div @click="menuIsOpen = ! menuIsOpen">
-                    <img class="cross" src="../public/img/cross.webp" alt="cross">
-                </div>
+    <body>
+        <header>
+            <a href="index.html">
+                <img class="logo" src="../public/img/panneau_rue.webp" alt="logo">
+            </a>
+            <a class="langue" href="ENindex.html">EN</a>
+            <div @click="menuIsOpen = ! menuIsOpen">
+                <img class="hamburger" src="../public/img/menu-open.webp" alt="menu">
             </div>
-            <ul class="menu__link">
-                <li> <div class="signature"><a href="basquiat.html"><img class="signature" src="../public/img/signatureBasquiat.webp"><div><h1>Jean-michel Basquiat</h1></div></a></div></li>
-                <li> <div class="signature"><a href="banksy.html"><div><h1>Banksy</h1></div><img class="signature" src="../public/img/signatureBanksy.webp"></a></div>  </li>
-                <li> <div class="signature"><a href="misstic.html"><img class="signature" src="../public/img/signatureMissTic.webp"> <div><h1>Miss.Tic</h1></div></a></div>  </li>
-                <li> <div class="signature"><a href="haring.html"><div><h1>Keith Haring</h1></div><img class="signature" src="../public/img/signatureHaring.webp"> </a></div>  </li>
-            </ul>
-        </nav>
-    </header>
+            <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+                <div class="menu__overlay">
+                    <a href="index.html">
+                        <div class="nomMenu"><h1>Exposition "Art des rues"</h1></div>
+                    </a>
+                    <div @click="menuIsOpen = ! menuIsOpen">
+                        <img class="cross" src="../public/img/cross.webp" alt="cross">
+                    </div>
+                </div>
+                <ul class="menu__link">
+                    <li> <div class="signature"><a href="basquiat.html"><img class="signature" src="../public/img/signatureBasquiat.webp"><div><h1>Jean-michel Basquiat</h1></div></a></div></li>
+                    <li> <div class="signature"><a href="banksy.html"><div><h1>Banksy</h1></div><img class="signature" src="../public/img/signatureBanksy.webp"></a></div>  </li>
+                    <li> <div class="signature"><a href="misstic.html"><img class="signature" src="../public/img/signatureMissTic.webp"> <div><h1>Miss.Tic</h1></div></a></div>  </li>
+                    <li> <div class="signature"><a href="haring.html"><div><h1>Keith Haring</h1></div><img class="signature" src="../public/img/signatureHaring.webp"> </a></div>  </li>
+                </ul>
+            </nav>
+        </header>
 
-    <div><h1>Miss.Tic</h1></div>
-    <div class="carousel">
-        <div class="carouselitem">
-            <figure><img src="../public/img/misstic_1.webp" alt="Dos Cabezas"><figcaption>"Partir et laisser mon ombre rêveuse" 1990</figcaption></figure></div>
-        <div class="carouselitem"><figure><img src="../public/img/misstic_2.webp" alt="musique"><figcaption>"Mieux que rien" Date inconnue</figcaption></figure></div>
-        <div class="carouselitem"><figure><img src="../public/img/misstic_3.webp" alt="musique"><figcaption>"No comment" Date inconnue</figcaption></figure></div>
-      </div>
-      <div>Miss.Tic, pseudonyme de Radhia Novat, née le 20 février 1956 à Paris et morte le 22 mai 2022 dans la même ville, est une artiste de street art connue pour ses œuvres au pochoir, essentiellement sur les murs de la capitale française. Plasticienne et poète d'art urbain, ses œuvres apparaissent dans le paysage pictural et urbain à partir de 1985.</div>
-    <div><a href="banksy.html">Banksy</a><a href="haring.html">Keith Haring</a> </div>
-
-    <footer>
-        <div class="phrase"> <a href="billetterie.html"><p class="foot">Billetterie</p></a> <a href="contact.html"><p class="foot">Contact</p></a> </div>
-        </div>
-        <div class="phrase">
-        <img class="reseau" src="../public/img/instagram.webp" alt="instagram">
-        <img class="reseau" src="../public/img/twitter.webp" alt="twitter">
-        <img class="reseau" src="../public/img/facebook.webp" alt="facebook">
-        <a href="http://mmimontbeliard.com"> <img class="reseau" src="../public/img/logoMMiblanc.webp" alt="logo MMi" /></a>
-        </div>
         
-     </footer>
-     </body>
-     </html>    
+        <div class="artiste"><h1>Miss.Tic</h1></div>
+        <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+            <button @click="const p = $refs.parent ; p.scrollLeft -= p.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt</button><button @click="const p = $refs.parent ; p.scrollLeft += p.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">&gt</button>
+            <div class="carrousel_parent-ecrans" x-ref="parent" 
+                    @scroll.debounce.250ms.passive="
+            hrefCourant = '#'+
+                            [...$refs.parent.children]
+                            .find(e=>e.getBoundingClientRect().x>=0)
+                            .id
+                                                "
+            >
+                <div id="ecran-1" class="carrousel_ecran">
+                    <figure>
+                        <img src="../public/img/misstic_1.webp" alt="image 1">
+                        <figcaption>"Partir et laisser mon ombre rêveuse" 1990</figcaption>
+                    </figure>
+                </div>
+                <div id="ecran-2" class="carrousel_ecran">
+                    <figure>
+                        <img src="../public/img/misstic_2.webp" alt="image 2">
+                        <figcaption>"Mieux que rien c'est pas assez" Date inconnue</figcaption>
+                    </figure>
+                </div>
+                <div id="ecran-3" class="carrousel_ecran">
+                    <figure>
+                        <img src="../public/img/misstic_3.webp" alt="image 3">
+                        <figcaption>"No comment" Date inconnue</figcaption>
+                    </figure>
+                </div>
+        </div>
+
+        
+        <div class="fondArtiste"><p class="descriptionArtiste">Miss.Tic, pseudonyme de Radhia Novat, née le 20 février 1956 à Paris et morte le 22 mai 2022 dans la même ville, est une artiste de street art connue pour ses œuvres au pochoir, essentiellement sur les murs de la capitale française. Plasticienne et poète d'art urbain, ses œuvres apparaissent dans le paysage pictural et urbain à partir de 1985.</p></div>
+        <div class="suivant"><div class="prec"><a class="txtsuivant" href="banksy.html">Banksy</a></div><div class="suiv"><a class="txtsuivant" href="haring.html">Keith Haring</a></div> </div>
+
+        <footer>
+            <div class="phrase"> <a href="billetterie.html"><p class="foot">Billetterie</p></a> <a href="contact.html"><p class="foot">Contact</p></a> </div>
+            <div class="phrase">
+            <img class="reseau" src="../public/img/instagram.webp" alt="instagram">
+            <img class="reseau" src="../public/img/twitter.webp" alt="twitter">
+            <img class="reseau" src="../public/img/facebook.webp" alt="facebook">
+            <a href="http://mmimontbeliard.com"> <img class="reseau" src="../public/img/logoMMiblanc.webp" alt="logo MMi" /></a>
+            </div>
+            
+        </footer>
+        </body>
+        </html>    
