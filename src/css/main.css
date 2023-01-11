@@ -11,7 +11,11 @@
     background-attachment: none;
     background-size: cover;
     text-align: center;
+}
 
+.berthaexpo {
+   background-color: #333A66;
+    text-align: center;
 }
 
 .berthaoeuvre {
@@ -234,3 +238,7 @@ form {
     padding-bottom: 0;
 }
 
+.expo {
+    background-color: #333A66;
+    color: black;
+}
