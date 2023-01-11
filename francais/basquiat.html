@@ -10,7 +10,7 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
-<div class="">
+<div class="berthaartiste">
 
 <body>
     <header>
@@ -39,18 +39,42 @@
         </nav>
     </header>
 
-    <div><h1>Jean-michel Basquiat</h1></div>
-    <div class="carousel">
-        <div class="carouselitem"><a href="basquiat_1.html"><figure><img src="../public/img/basquiat_1.webp" alt="Dos Cabezas"><figcaption>"Dos Cabezas" 1982</figcaption></figure></a></div>
-        <div class="carouselitem"><a href="basquiat_2.html"><figure><img src="../public/img/basquiat_2.webp" alt="Pez Dispenser"><figcaption>"Pez Dispenser" 1984</figcaption></figure></a></div>
-        <div class="carouselitem"><a href="basquiat_3.html"><figure><img src="../public/img/basquiat_3.webp" alt="Andy Warhol"><figcaption>"Andy Warhol as a banana" 1984</figcaption></a></figure></div>
-      </div>
+    <div class="artiste"><h1>Jean-michel Basquiat</h1></div>
+    <div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+        <button @click="const p = $refs.parent ; p.scrollLeft -= p.clientWidth" class="carrousel_btn carrousel_btn-avant" aria-label="slide précedant">&lt</button><button @click="const p = $refs.parent ; p.scrollLeft += p.clientWidth" class="carrousel_btn carrousel_btn-apres" aria-label="slide suivant">&gt</button>
+        <div class="carrousel_parent-ecrans" x-ref="parent" 
+                @scroll.debounce.250ms.passive="
+        hrefCourant = '#'+
+                          [...$refs.parent.children]
+                           .find(e=>e.getBoundingClientRect().x>=0)
+                           .id
+                                             "
+        >
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="../public/img/basquiat_1.webp" alt="image 1">
+                    <figcaption>"Dos Cabezas"</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="../public/img/basquiat_2.webp" alt="image 2">
+                    <figcaption>"Pez Dispenser"</figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="../public/img/basquiat_3.webp" alt="image 3">
+                    <figcaption>"Andy Warhol as a banana"</figcaption>
+                </figure>
+            </div>
+
       <div>Artiste de rue né le 22 décembre 1960 à Brooklyn et mort le 12 août 1988 d’une overdose de cocaïne et d'héroïne. Il exerçait son art à New York où il se lie d’amitié avec Andy Warhol. Il sera reconnu comme un peintre d’avant-garde et tel un pionnier du mouvement underground.</div>
     <div><a href="haring.html">Keith Haring</a><a href="banksy.html">Banksy</a> </div>
+    </div>
 
     <footer>
         <div class="phrase"> <a href="billetterie.html"><p class="foot">Billetterie</p></a> <a href="contact.html"><p class="foot">Contact</p></a> </div>
-        </div>
         <div class="phrase">
         <img class="reseau" src="../public/img/instagram.webp" alt="instagram">
         <img class="reseau" src="../public/img/twitter.webp" alt="twitter">

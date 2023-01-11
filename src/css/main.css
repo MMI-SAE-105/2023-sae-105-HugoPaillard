@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+.berthaartiste {
+    background-image: url(../../public/img/musee.webp);
+    background-attachment: none;
+    background-size: cover;
+    text-align: center;
+}
+
 .panneauVille {
     width: auto;
     height: 3.5em;
@@ -40,3 +47,67 @@
     text-decoration: underline;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    height: 11.875em;
+    width: auto;
+}
+
+.carrousel_parent-ecrans {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.carrousel_ecran {
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start;
+}
+
+.carrousel_ecran figure {
+    margin: 0;
+}
+
+.carrousel {
+    position: relative;
+}
+  
+.carrousel_btn {
+    position: absolute;
+    top: 17%; /* centre verticalement */
+    transform: translateY(-50%); /* methode du point mort */
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    color: #fff;
+}
+  
+.carrousel_btn-avant {
+    left: 0;
+}
+  
+.carrousel_btn-apres {
+    right: 0;
+}
+
+
+.caroussel_liste-liens {
+    border: solid;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 30px;
+    padding: 10px 0 8px 0;
+    list-style: none;
+    gap: 1rem;
+}

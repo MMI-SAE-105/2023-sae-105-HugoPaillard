@@ -8,6 +8,7 @@
     color: #fff;
     margin: 0;
     height: 100%;
+    z-index: 50;
 }
 
 .menu__overlay {
