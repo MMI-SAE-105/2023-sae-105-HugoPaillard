@@ -3,6 +3,7 @@
     background-attachment: none;
     background-size: cover;
     text-align: center;
+    padding-bottom: 50px;
 }
 
 .berthaartiste {
@@ -111,3 +112,64 @@ img {
     list-style: none;
     gap: 1rem;
 }
+
+figcaption {
+    font-family: var(--sed);
+}
+
+.artiste {
+    font-family: var(--sed);
+}
+
+.descriptionArtiste {
+    color: white;
+    font-family: var(--mont);
+    margin: 1em;
+    margin-top: 2em;
+    justify-content: center;
+    background-color: black;
+    padding: 5px;
+}
+
+.fondArtiste {
+    height: 10em;
+    width: auto;
+    text-align: left;
+     
+}
+
+.suivant {
+    height: 4em;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: em;
+    align-items: center;
+    color: white;
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.suiv {
+    background-color: black;
+    height: 3em;
+    width: 5em;
+    font-family: var(--sed);
+    color: white;
+    float: right;
+}
+
+.prec {
+    background-color: black;
+    height: 3em;
+    width: 5em;
+    font-family: var(--sed);
+    color: white;
+    float: left;
+}
+
+.txtsuivant {
+    color: white;
+    font-style: bold;
+}
+
