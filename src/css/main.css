@@ -1,14 +1,14 @@
 .berthaaccueil {
     background-image: url(../../public/img/rue.webp);
-    background-attachment: fixed;
-    background-size: fixed;
+    background-attachment: none;
+    background-size: cover;
     text-align: center;
 }
 
 .panneauVille {
     width: auto;
     height: 3.5em;
-    margin: 0.4em;
+    margin: 0.2em;
 }
 
 .phrase{
@@ -18,7 +18,8 @@
     justify-content: space-between;
     margin: 10px;
     align-items: center;
-    padding: 0 10px;
+    color: white;
+
 }
 
 .reseau{
@@ -32,5 +33,9 @@
     position: center;
 }
 
-
+.foot{
+    color: white;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
 

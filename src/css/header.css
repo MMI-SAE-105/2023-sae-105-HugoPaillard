@@ -1,4 +1,5 @@
 header {
+    background-color: var(--couleur--projet-3);
     height: 100px;
     width: auto;
     border: 3px solid var(--couleur--projet-5);
@@ -10,24 +11,27 @@ header {
 }
 
 .hamburger {
-    width: 45px;
-    height: 30px;
+    width: 3em;
+    height: 2em;
     fill: black;
 }
 
 .cross {
-    width: 45px;
-    height: 45px;
+    width: 3em;
+    height: 3em;
     fill: black;
 }
 
-.logo {
-    width:auto;
-    height: 6em;
-    
+
+.langue {
+    position: absolute;
+    top: 2em;
+    right: 4em;
+    text-decoration: underline; 
+    font-size: 24px;
 }
 
-.header__logo {
-    position: relative;
-    inset: 10px 10px auto auto;
+.logo {
+    width: auto;
+    height: 5em;
 }
